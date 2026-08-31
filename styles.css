@@ -79,7 +79,7 @@ h1 {
 
 .home-nav {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 34px;
   margin-top: 40px;
 }
@@ -458,10 +458,112 @@ h1 {
   object-fit: contain;
 }
 
+.projects-shell { max-width: 1120px; }
+
+.projects-shell > h1 {
+  margin-bottom: 12px;
+  font-size: clamp(36px, 6vw, 66px);
+  letter-spacing: -3px;
+}
+
+.projects-intro {
+  max-width: 680px;
+  margin: 0 0 48px;
+  color: #555552;
+  font-size: 16px;
+}
+
+.project-list {
+  display: grid;
+  gap: 64px;
+}
+
+.project-entry {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(260px, 0.8fr);
+  gap: 34px;
+  align-items: center;
+  padding-bottom: 64px;
+  border-bottom: 1px solid var(--line);
+}
+
+.project-entry:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.project-media {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--soft);
+  box-shadow: 0 8px 24px rgba(28, 28, 27, 0.08);
+}
+
+.project-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-media--pulse img {
+  width: 160%;
+  max-width: none;
+  transform: translateX(-37.5%);
+}
+
+.project-number,
+.project-kicker {
+  color: var(--muted);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.project-number { margin: 0 0 18px; }
+
+.project-copy h2 {
+  margin: 0 0 5px;
+  font-size: 28px;
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+
+.project-kicker { margin: 0 0 18px; }
+
+.project-description {
+  margin: 0;
+  color: #494946;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 22px;
+  font-size: 13px;
+}
+
+.project-links a { text-underline-offset: 3px; }
+
+.github-profile-link {
+  display: inline-block;
+  margin-top: 52px;
+  color: var(--muted);
+  font-size: 13px;
+  text-underline-offset: 3px;
+}
+
 @media (max-width: 900px) {
   .home-nav { grid-template-columns: repeat(3, 1fr); row-gap: 22px; }
   .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .bookshelf-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .project-entry { grid-template-columns: 1fr; gap: 24px; }
 }
 
 @media (max-width: 650px) {
@@ -484,4 +586,9 @@ h1 {
   .book-search-wrap { flex-basis: auto; width: 100%; max-width: 320px; }
   .bookshelf-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 34px 16px; }
   .book-summary { font-size: 12px; }
+  .projects-shell > h1 { letter-spacing: -1.8px; }
+  .projects-intro { margin-bottom: 38px; }
+  .project-list { gap: 46px; }
+  .project-entry { padding-bottom: 46px; }
+  .project-copy h2 { font-size: 25px; }
 }
