@@ -54,13 +54,6 @@ h1 {
   letter-spacing: -1.25px;
 }
 
-.wordmark sup {
-  position: relative;
-  top: -0.1em;
-  font-size: 13px;
-  letter-spacing: -0.2px;
-}
-
 .home-intro {
   display: grid;
   grid-template-columns: 210px 1fr;
@@ -73,7 +66,6 @@ h1 {
   width: 210px;
   height: 210px;
   object-fit: cover;
-  filter: grayscale(1);
 }
 
 .bio { padding-top: 0; }
@@ -87,7 +79,7 @@ h1 {
 
 .home-nav {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 34px;
   margin-top: 40px;
 }

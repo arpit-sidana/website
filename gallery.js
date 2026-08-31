@@ -17,7 +17,7 @@ const labels = {
 
 if ((collection === "cars" || collection === "coffee") && labels[item]) {
   const label = labels[item];
-  document.title = `${label} — arpit sidana™`;
+  document.title = `${label} — arpit sidana`;
   document.querySelector("#title").textContent = label;
   document.querySelector("#back").href = `${collection}.html`;
   document.querySelector("#back").textContent = collection;
@@ -27,4 +27,3 @@ if ((collection === "cars" || collection === "coffee") && labels[item]) {
 } else {
   window.location.replace("index.html");
 }
-
