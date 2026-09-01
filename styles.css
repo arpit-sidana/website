@@ -73,13 +73,17 @@ h1 {
   object-fit: cover;
 }
 
-.bio { padding-top: 0; }
+.bio {
+  max-width: 900px;
+  padding-top: 0;
+}
 
 .bio p {
-  margin: 0 0 13px;
-  padding: 1px 0 1px 20px;
-  border-left: 3px solid var(--ink);
-  letter-spacing: 0.15px;
+  margin: 0 0 18px;
+  color: #41413f;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
 }
 
 .home-nav {
@@ -697,7 +701,7 @@ h1 {
   h1 { font-size: 30px; }
   .home-intro { grid-template-columns: 1fr; gap: 26px; }
   .portrait { width: 100%; height: auto; max-height: 410px; object-position: center; }
-  .bio p { padding-left: 14px; }
+  .bio p { font-size: 15px; }
   .home-nav { grid-template-columns: repeat(2, 1fr); margin-top: 34px; }
   .site-credit { align-self: flex-start; padding-top: 58px; text-align: left; }
   .gallery { grid-template-columns: 1fr; }
