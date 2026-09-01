@@ -133,6 +133,12 @@ h1 {
 
 .empty-note { margin-top: 8px; }
 
+.fun-intro {
+  margin: -12px 0 32px;
+  color: var(--muted);
+  font-size: 15px;
+}
+
 .view-pill {
   display: inline-flex;
   align-items: center;
