@@ -17,7 +17,7 @@ const labels = {
 
 if ((collection === "cars" || collection === "coffee") && labels[item]) {
   const label = labels[item];
-  document.title = `${label} — arpit sidana`;
+  document.title = `${label} — Arpit Sidana`;
   document.querySelector("#title").textContent = label;
   document.querySelector("#back").href = `${collection}.html`;
   document.querySelector("#back").textContent = collection;
