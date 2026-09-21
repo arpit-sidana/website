@@ -88,7 +88,7 @@ h1 {
 
 .home-nav {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 34px;
   margin-top: 40px;
 }
@@ -164,83 +164,6 @@ h1 {
 .backlink:hover { text-decoration: underline; }
 
 .empty-note { margin-top: 8px; }
-
-.fun-intro {
-  margin: -12px 0 32px;
-  color: var(--muted);
-  font-size: 15px;
-}
-
-.view-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin: -10px 0 20px;
-  padding: 5px 12px;
-  border-radius: 18px;
-  background: var(--soft);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: 14px;
-}
-
-.grid-icon {
-  display: grid;
-  grid-template-columns: repeat(2, 5px);
-  gap: 2px;
-}
-
-.grid-icon i {
-  width: 5px;
-  height: 5px;
-  border: 1px solid #6f6f6b;
-  border-radius: 1px;
-}
-
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 14px;
-}
-
-.card {
-  overflow: hidden;
-  color: #252525;
-  border: 1px solid #dededb;
-  border-radius: 10px;
-  background: #fff;
-  box-shadow: 0 1px 2px rgba(15, 15, 15, 0.04);
-  text-decoration: none;
-  transition: background 120ms ease;
-}
-
-.card:hover { background: #fafafa; }
-
-.card img {
-  display: block;
-  width: 100%;
-  height: 168px;
-  object-fit: cover;
-}
-
-.card-title {
-  display: flex;
-  gap: 9px;
-  align-items: center;
-  min-height: 40px;
-  padding: 8px 12px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: 15px;
-}
-
-.card-title .page-icon { width: 13px; height: 17px; }
-
-.group-label {
-  margin: 8px 0 12px 8px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: 14px;
-}
-
-.group-label span { color: #a0a09b; margin-left: 8px; }
 
 .home-social-links {
   display: flex;
@@ -513,14 +436,6 @@ h1 {
   color: var(--muted);
 }
 
-.detail-image {
-  display: block;
-  max-width: min(900px, 100%);
-  max-height: 72vh;
-  margin-top: 10px;
-  object-fit: contain;
-}
-
 .projects-shell { max-width: 1120px; }
 
 .projects-shell > h1 {
@@ -690,8 +605,7 @@ h1 {
 }
 
 @media (max-width: 900px) {
-  .home-nav { grid-template-columns: repeat(3, 1fr); row-gap: 22px; }
-  .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .home-nav { grid-template-columns: repeat(2, 1fr); row-gap: 22px; }
   .bookshelf-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .project-entry { grid-template-columns: 1fr; gap: 24px; }
 }
@@ -709,8 +623,6 @@ h1 {
   .bio p { font-size: 15px; }
   .home-nav { grid-template-columns: repeat(2, 1fr); margin-top: 34px; }
   .site-credit { align-self: flex-start; padding-top: 58px; text-align: left; }
-  .gallery { grid-template-columns: 1fr; }
-  .card img { height: 210px; }
   .table-tools { justify-content: flex-start; flex-wrap: wrap; }
   .bookshelf-shell h1 { letter-spacing: -1.8px; }
   .bookshelf-toolbar { flex-direction: column; }
