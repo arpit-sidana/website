@@ -22,7 +22,7 @@
   --line: #e5e5e5;
   --soft: #f7f7f5;
   --page: #fff;
-  --accent: #002fa7;
+  --accent: #111;
   --serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
   --mono: "IA Writer Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 }
@@ -132,16 +132,6 @@ h1 {
   margin: 0 0 18px;
 }
 
-.portrait {
-  display: block;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  margin-top: 42px;
-  object-fit: cover;
-  object-position: center 36%;
-  border: 1px solid var(--line);
-}
-
 .home-social-links {
   display: flex;
   flex-wrap: wrap;
@@ -169,6 +159,11 @@ h1 {
   display: block;
   width: 15px;
   height: 15px;
+}
+
+.social-icon-link[aria-label="X"] img {
+  width: 13px;
+  height: 13px;
 }
 
 .site-credit {
@@ -563,11 +558,6 @@ h1 {
   .site-nav { gap: 5px 12px; }
   h1 { font-size: 23px; }
 
-  .portrait {
-    aspect-ratio: 4 / 3;
-    margin-top: 34px;
-  }
-
   .site-credit {
     align-items: flex-start;
     flex-direction: column;
@@ -621,7 +611,6 @@ h1 {
 @media (max-width: 390px) {
   .site-header { display: block; }
   .site-nav { margin-top: 8px; }
-  .portrait { aspect-ratio: 1 / 1; }
   .bookshelf-grid { grid-template-columns: 1fr; }
 }
 
