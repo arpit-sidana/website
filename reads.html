@@ -4,12 +4,24 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Books Arpit Sidana has read and plans to read, organized by genre.">
+  <meta name="robots" content="noindex, nofollow" data-feature-robots="bookshelf">
   <title>Bookshelf — Arpit Sidana</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="site-config.js" defer></script>
 </head>
 <body>
-  <main class="site-shell bookshelf-shell">
-    <a class="backlink" href="index.html">Arpit Sidana</a>
+  <main class="site-shell archived-shell" data-feature-disabled="bookshelf">
+    <a class="backlink" href="index.html" aria-label="Back to home">← Home</a>
+    <p class="eyebrow">archived</p>
+    <h1>Bookshelf</h1>
+    <p class="bookshelf-intro">This section is taking a short break.</p>
+    <footer class="site-credit site-credit--subpage">
+      <span>Copyright © Arpit Sidana 2026</span>
+      <span class="site-credit-production">An OpenAI Codex production</span>
+    </footer>
+  </main>
+  <main class="site-shell bookshelf-shell" data-feature="bookshelf" hidden>
+    <a class="backlink" href="index.html" aria-label="Back to home">← Home</a>
     <p class="eyebrow">library</p>
     <h1>Bookshelf</h1>
     <p class="bookshelf-intro">Books that shaped how I think, plus the ones waiting on the shelf.</p>
@@ -23,6 +35,10 @@
     <p class="book-results" id="book-results" aria-live="polite"></p>
     <section class="bookshelf-grid" id="bookshelf-grid" aria-label="Books"></section>
     <p class="bookshelf-empty" id="bookshelf-empty" hidden>No books match that filter.</p>
+    <footer class="site-credit site-credit--subpage">
+      <span>Copyright © Arpit Sidana 2026</span>
+      <span class="site-credit-production">An OpenAI Codex production</span>
+    </footer>
   </main>
   <script src="reads.js"></script>
 </body>
