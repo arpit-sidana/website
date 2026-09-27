@@ -167,16 +167,13 @@ h1 {
 }
 
 .site-credit {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px 12px;
-  justify-content: space-between;
   margin-top: auto;
   padding-top: 48px;
   color: var(--muted);
-  font-family: var(--mono);
-  font-size: 10px;
-  line-height: 1.5;
+  font-family: var(--serif);
+  font-size: 12px;
+  line-height: 1.4;
+  letter-spacing: 0;
 }
 
 .site-credit--subpage {
@@ -184,8 +181,6 @@ h1 {
   padding-top: 22px;
   border-top: 1px solid var(--line);
 }
-
-.site-credit-production { color: var(--faint); }
 
 .projects-intro,
 .writing-intro,
@@ -575,8 +570,6 @@ h1 {
   h1 { font-size: 23px; }
 
   .site-credit {
-    align-items: flex-start;
-    flex-direction: column;
     padding-top: 38px;
   }
 
