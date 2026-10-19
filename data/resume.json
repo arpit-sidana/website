@@ -1,0 +1,69 @@
+{
+  "pdf": "assets/documents/arpit-sidana-resume.pdf",
+  "pdfVersion": "20261018",
+  "yearsExperience": 9,
+  "homepageBio": "I’m a Technical Product Manager with nine years of experience across AI/ML, cloud platforms, and enterprise software. As a builder-first PM, I move from strategy to data, model and API testing, prototypes, and architecture. I’m an early adopter of new AI tools and agents, and I evangelize the ones that create meaningful value.",
+  "summary": "AI Product Manager with 9 years leading AI/ML, data, and cloud products from 0 → 1 through enterprise scale across F100 and a B2B SaaS startup. Most recently led LLM-powered automated access provisioning for 82K users, automating 64% of all enterprise requests with 97%+ precision. Previously delivered $8M/year in OpEx savings and reduced access-risk exposure by 94% across 5.7M+ cloud resources. Builder-first and hands-on with LLMs, CLI, AI agents, and GenAI prototyping. Experienced across product discovery, roadmap, model evaluation, risk-tiered rollout, adoption, and monitoring.",
+  "experience": [
+    {
+      "company": "Capital One",
+      "location": "New York City, NY",
+      "roles": [
+        {"title": "Product Manager - AI, Analytics", "dates": "Jan 2025 – Present"},
+        {"title": "Lead Product Analyst", "dates": "Oct 2020 – Dec 2024"}
+      ],
+      "intro": "Scoped, launched, and owned a portfolio of data and AI/ML products securing human and machine access enterprise-wide.",
+      "projects": [
+        {
+          "title": "GenAI Access Decisioning",
+          "points": [
+            "Led product roadmap, evals, and risk-tiered launch for LLM access decisioning, scaled to all 82K enterprise users",
+            "Defined UI/UX and grew adoption leveraging 3 LLM (Gemma 4) models, combining identity, request, and context datasets",
+            "Established launch guardrails and model acceptance criteria with Model Risk Office, evals across precision, latency, consistency, and PII; operationalized golden datasets, LLM-as-judge evaluation, red-team testing, and production monitoring",
+            "Automated 64% manual access requests at 97%+ approval/rejection precision; reduced cycle time by 53%"
+          ]
+        },
+        {
+          "title": "Automated Employee Access Revocation",
+          "points": [
+            "Owned product strategy and roadmap for employee-access revocation, and improved certifications with automated controls",
+            "Scaled enterprise-wide adoption through executive alignment and company-wide forums, removed 364K+ unused human accesses via a “Last Login” data product, reduced risk-exposure window by 40%, and saved $8M/year in OpEx"
+          ]
+        },
+        {
+          "title": "Automated Risk Certification",
+          "points": [
+            "Product lead for continuous S3 risk certification product, scaling roadmap, API and UX requirements, and phased rollout across 5.7M cloud resources; reduced the risk-exposure window by 94%, and improved risk remediation by 37%",
+            "Drove enterprise-wide adoption through self-service dashboards, office hours, and guided onboarding for customer support"
+          ]
+        }
+      ]
+    },
+    {
+      "company": "Vitalize Venture Capital",
+      "location": "Chicago, IL",
+      "roles": [{"title": "Founding Angel Investor", "dates": "July 2021 – July 2023"}],
+      "points": ["Founding member and investor; advised early-stage startups on product roadmap, UX validation, and go-to-market strategy"]
+    },
+    {
+      "company": "o9 Solutions",
+      "location": "Dallas, TX",
+      "roles": [{"title": "Product Manager - ML, Cloud (Lead Consultant)", "dates": "Aug 2017 – Oct 2020"}],
+      "points": [
+        "Owned the roadmap and enterprise delivery for AI-powered demand and supply planning platform for a robotics manufacturer, collaborated with pre-sales to scale configurable planning workflows to 300K monthly active users",
+        "Built company practice for demand forecasting product offering. Also built and implemented evaluation criteria across time-series models (ARIMA, XGBoost), reducing MAPE by 10%, and driving $5M in incremental revenue",
+        "Scoped and built reusable workflows and reference models for B2B SaaS platform with sales and engineering teams, reducing inventory costs by $15M/year, improving planning efficiency by 93%, and accelerating RFPs and enterprise deployments"
+      ]
+    }
+  ],
+  "education": [
+    {"school": "UNIVERSITY OF MINNESOTA, Carlson School of Management, Minneapolis, MN", "degree": "Master of Science in Business Analytics", "date": "May 2017"},
+    {"school": "VIT UNIVERSITY, Vellore, India", "degree": "Bachelor of Technology, Engineering", "date": "May 2016"}
+  ],
+  "skills": [
+    {"title": "AI Product & Evaluation", "text": "LLM product strategy, RAG, MCP, AI agents, real-time inference, model evaluation, LLM-as-judge, golden datasets, human-in-the-loop decisioning, AI guardrails, red teaming, safety, trust, alignment"},
+    {"title": "Product, Engineering & UX", "text": "Product discovery, PRDs, roadmaps, stakeholder management, executive presentations, GTM, Jira, Confluence, user research, interviews, usability testing, surveys, UX design, GitHub"},
+    {"title": "Data Analytics", "text": "AWS, APIs, SQL, Python, Snowflake, Databricks, data pipelines, observability, Splunk, QuickSight"},
+    {"title": "Certifications", "text": "AWS Certified Solutions Architect – Associate; Product Management, Capital One"}
+  ]
+}

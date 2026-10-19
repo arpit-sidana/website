@@ -1,0 +1,19 @@
+name: Resume consistency
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  resume-consistency:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r scripts/requirements-resume.txt
+      - name: Verify bio, resume reader and both PDF actions
+        run: python scripts/resume_sync.py
+      - name: Test mismatch detection
+        run: python -m unittest discover -s tests -p 'test_resume_sync.py'
