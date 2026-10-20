@@ -53,8 +53,16 @@ a {
 
 a:hover { color: var(--accent); }
 
+/* Pointer clicks stay quiet; keyboard navigation keeps a visible indicator. */
+:focus:not(:focus-visible) { outline: none; }
+a:focus-visible, summary:focus-visible {
+  outline: none;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
 .site-shell {
-  width: min(600px, calc(100% - 48px));
+  width: min(760px, calc(100% - 48px));
   min-height: 100vh;
   margin: 0 auto;
   padding: 64px 0 48px;
@@ -269,8 +277,8 @@ h1 {
 
 .resume-actions a::after {
   content: "↗";
-  font-size: 20px;
-  line-height: 0.8;
+  font-size: 14px;
+  line-height: 1;
   transition: transform 120ms ease;
 }
 
@@ -278,36 +286,20 @@ h1 {
 
 /* An in-page resume, using the site's quiet editorial typography. */
 .resume-reader {
-  display: grid;
-  grid-template-columns: 108px minmax(0, 1fr);
   border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
 }
 
-.resume-navigation {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 15px;
-  padding: 26px 16px 24px 0;
-  font-size: 14px;
+.resume-section p.resume-hint {
+  margin: 18px 0 24px;
+  font-size: 13px;
+  color: var(--muted);
 }
-
-.resume-navigation a { text-decoration: none; }
-.resume-navigation a[aria-current] { color: var(--ink); text-decoration: underline; }
 
 .resume-content {
-  height: 570px;
-  overflow-y: auto;
-  scrollbar-width: thin;
-  scrollbar-color: var(--faint) transparent;
-  padding: 25px 14px 32px 18px;
   font-size: 16px;
   line-height: 1.55;
 }
 
-.resume-reader :focus-visible { outline: 2px solid var(--muted); outline-offset: 4px; }
-.resume-chapter { scroll-margin-top: 24px; }
 .resume-chapter + .resume-chapter { margin-top: 38px; }
 .resume-chapter h3 {
   margin: 0 0 20px;
@@ -329,9 +321,30 @@ h1 {
 .resume-role + .resume-role { margin-top: 10px; }
 .resume-chapter .resume-date { font-size: 12px; color: var(--muted); }
 .resume-chapter .resume-job-intro { margin-top: 16px; }
-.resume-disclosure { margin-top: 18px; }
-.resume-disclosure summary { cursor: pointer; color: var(--ink); padding: 5px 0; }
-.resume-disclosure summary::marker { color: var(--muted); font-size: 11px; }
+.resume-disclosure { margin-top: 12px; }
+.resume-disclosure summary {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 20px;
+  cursor: pointer;
+  color: var(--ink);
+  padding: 10px 0;
+  list-style: none;
+}
+.resume-disclosure summary::-webkit-details-marker { display: none; }
+.resume-disclosure summary::after {
+  content: "+";
+  flex: 0 0 auto;
+  font-family: var(--mono);
+  font-size: 17px;
+  font-weight: 400;
+  color: var(--muted);
+}
+.resume-disclosure[open] > summary::after { content: "−"; }
+.resume-disclosure summary h3 { margin: 0; }
+.resume-disclosure summary:hover { color: var(--text); }
+.resume-disclosure[open] > summary { margin-bottom: 10px; }
 .resume-disclosure ul { margin: 10px 0 0; padding-left: 20px; }
 .resume-disclosure li + li { margin-top: 10px; }
 .resume-degree + .resume-degree, .resume-skill + .resume-skill { margin-top: 22px; }
@@ -341,15 +354,10 @@ h1 {
 @media (max-width: 640px) {
   .resume-overview { align-items: flex-start; flex-direction: column; gap: 18px; }
   .resume-overview .resume-actions { flex-direction: row; flex-wrap: wrap; gap: 20px; }
-  .resume-reader { grid-template-columns: minmax(0, 1fr); }
-  .resume-navigation { flex-direction: row; flex-wrap: wrap; gap: 10px 18px; padding: 18px 0; }
-  .resume-content { height: 540px; max-height: 70svh; padding: 10px 10px 24px 2px; }
 }
 
 @media print {
-  .resume-reader { display: block; }
-  .resume-navigation { display: none; }
-  .resume-content { height: auto; max-height: none; overflow: visible; padding: 20px 0; }
+  .resume-hint { display: none; }
 }
 
 .github-intro { margin-bottom: 32px; }

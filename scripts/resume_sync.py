@@ -37,19 +37,15 @@ def render(data):
         f'<a href="{pdf}" target="_blank" rel="noopener">view PDF</a>',
         f'<a href="{pdf}" download="Arpit-Sidana-Resume.pdf">download PDF</a></div></div>',
         '<div class="resume-reader">',
-        '<nav class="resume-navigation" aria-label="Resume sections">',
-        '<a href="#resume-summary" aria-current="location">Overview</a>',
-        '<a href="#resume-experience">Experience</a>',
-        '<a href="#resume-education">Education</a>',
-        '<a href="#resume-skills">Skills</a></nav>',
-        '<div class="resume-content" role="region" aria-label="Resume reader" tabindex="0">',
-        '<section id="resume-summary" class="resume-chapter" aria-labelledby="resume-summary-heading">',
-        '<h3 id="resume-summary-heading" tabindex="-1">Overview</h3>',
-        f'<p>{esc(data["summary"])}</p></section>',
+        '<p class="resume-hint">Expand a section or project to explore the details.</p>',
+        '<div class="resume-content">',
+        '<details id="resume-summary" class="resume-chapter resume-disclosure">',
+        '<summary><h3>Overview</h3></summary>',
+        f'<p>{esc(data["summary"])}</p></details>',
         '<section id="resume-experience" class="resume-chapter" aria-labelledby="resume-experience-heading">',
-        '<h3 id="resume-experience-heading" tabindex="-1">Experience</h3>',
+        '<h3 id="resume-experience-heading">Experience</h3>',
     ]
-    for i, job in enumerate(data["experience"]):
+    for job in data["experience"]:
         out += [f'<article class="resume-job"><h4>{esc(job["company"])}</h4>',
                 f'<p class="resume-location">{esc(job["location"])}</p>']
         for role in job["roles"]:
@@ -57,19 +53,18 @@ def render(data):
         if job.get("intro"):
             out += [f'<p class="resume-job-intro">{esc(job["intro"])}</p>']
         if job.get("projects"):
-            for k, project in enumerate(job["projects"]):
-                opened = " open" if k == 0 else ""
-                out += [f'<details class="resume-disclosure"{opened}><summary>{esc(project["title"])}</summary>', bullets(project["points"]), '</details>']
+            for project in job["projects"]:
+                out += [f'<details class="resume-disclosure"><summary>{esc(project["title"])}</summary>', bullets(project["points"]), '</details>']
         else:
             out += [f'<details class="resume-disclosure"><summary>Role &amp; impact<span class="sr-only"> at {esc(job["company"])}</span></summary>', bullets(job["points"]), '</details>']
         out += ['</article>']
-    out += ['</section>', '<section id="resume-education" class="resume-chapter" aria-labelledby="resume-education-heading">', '<h3 id="resume-education-heading" tabindex="-1">Education</h3>']
+    out += ['</section>', '<details id="resume-education" class="resume-chapter resume-disclosure">', '<summary><h3>Education</h3></summary>']
     for item in data["education"]:
         out += [f'<div class="resume-degree"><h4>{esc(item["degree"])}</h4><p>{esc(item["school"])}</p><p class="resume-date">{esc(item["date"])}</p></div>']
-    out += ['</section>', '<section id="resume-skills" class="resume-chapter" aria-labelledby="resume-skills-heading">', '<h3 id="resume-skills-heading" tabindex="-1">Skills &amp; certifications</h3>']
+    out += ['</details>', '<details id="resume-skills" class="resume-chapter resume-disclosure">', '<summary><h3>Skills &amp; certifications</h3></summary>']
     for item in data["skills"]:
         out += [f'<div class="resume-skill"><h4>{esc(item["title"])}</h4><p>{esc(item["text"])}</p></div>']
-    out += ['</section></div></div>', '<!-- resume:generated:end -->']
+    out += ['</details></div></div>', '<!-- resume:generated:end -->']
     return "\n".join("      " + line for line in out)
 
 

@@ -27,8 +27,9 @@ the homepage. No JavaScript is needed to read the resume or expand role details.
    python3 -m unittest discover -s tests -p 'test_resume_sync.py'
    ```
 
-6. Review the generated diff and verify desktop/mobile scrolling, section links,
-   disclosures, keyboard navigation, and reduced-motion behavior. Confirm that
+6. Review the generated diff and verify desktop/mobile page scrolling, collapsed
+   disclosures and keyboard navigation. The resume uses normal document flow,
+   with no sidebar, nested scroll region, or programmatic focus. Confirm that
    both PDF actions deliver identical bytes. Commit the PDF, JSON, source lock,
    and generated HTML together. After deployment compare the public PDF hash.
 

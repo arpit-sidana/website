@@ -25,8 +25,8 @@ Change either value to `true` to publish that section or link again. While the B
 
 ## Resume consistency
 
-The Work page includes a native resume reader with section navigation and
-expandable role details. Career content lives in `data/resume.json` and is checked
+The Work page includes a continuous, in-page resume with expandable sections and
+role details, collapsed by default. Career content lives in `data/resume.json` and is checked
 against the approved PDF, homepage bio and both PDF actions by GitHub Actions.
 See [the resume update workflow](docs/resume-updates.md) before changing any resume
 content. Run `python3 scripts/resume_sync.py` to report mismatches locally.
