@@ -1,5 +1,13 @@
 # Website maintenance
 
+## Shared layout and styles
+
+All pages share `--content-width` in `styles.css`; do not add page-specific shell
+width overrides. After CSS changes run `python3 scripts/site_styles.py --write`
+to refresh the fingerprinted stylesheet and all HTML references, then run the
+same command without `--write` to verify. Include the generated asset and HTML
+references in the commit. Check desktop, tablet and mobile page widths together.
+
 ## Resume changes
 
 Read `docs/resume-updates.md` before changing the public resume PDF, career bio,

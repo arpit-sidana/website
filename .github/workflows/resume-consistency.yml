@@ -15,5 +15,7 @@ jobs:
       - run: python -m pip install -r scripts/requirements-resume.txt
       - name: Verify bio, resume reader and both PDF actions
         run: python scripts/resume_sync.py
+      - name: Verify shared stylesheet and page cache versions
+        run: python scripts/site_styles.py
       - name: Test mismatch detection
         run: python -m unittest discover -s tests -p 'test_resume_sync.py'

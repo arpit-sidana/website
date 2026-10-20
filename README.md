@@ -10,6 +10,10 @@ python3 -m http.server 4173
 
 Then open `http://localhost:4173`.
 
+After editing `styles.css`, run `python3 scripts/site_styles.py --write` to
+regenerate the fingerprinted stylesheet and update every page together. CI
+rejects stale references. All sections use the shared `--content-width` token.
+
 ## Feature toggles
 
 Public navigation for the Bookshelf and Substack link is controlled in `site-config.js`:
