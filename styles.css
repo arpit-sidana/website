@@ -156,8 +156,8 @@ h1 {
   text-decoration: none;
 }
 
-.mentoring-link img { display: block; width: 108px; height: auto; }
-.mentoring-link span { font-size: 20px; line-height: 1; }
+.mentoring-link img { display: block; width: 80px; height: auto; }
+.mentoring-link span { font-size: 16px; line-height: 1; }
 .mentoring-link:hover { opacity: 0.7; }
 
 .bio p {
@@ -422,7 +422,7 @@ h1 {
   gap: 14px;
   margin-top: 18px;
   font-family: var(--mono);
-  font-size: 11px;
+  font-size: 14px;
 }
 
 .github-profile-link {
@@ -430,7 +430,7 @@ h1 {
   margin-top: 38px;
   color: var(--muted);
   font-family: var(--mono);
-  font-size: 11px;
+  font-size: 14px;
 }
 
 /* Investing */
@@ -471,11 +471,7 @@ h1 {
 
 .investment-mark--nebius img { object-fit: contain; }
 
-.investment-mark--ticker {
-  font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: 0.02em;
-}
+.investment-mark--brand img { object-fit: contain; }
 
 .investment-meta {
   margin-bottom: 5px;
